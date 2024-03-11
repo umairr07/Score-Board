@@ -106,17 +106,17 @@ function updateData() {
 
     myData.forEach((ele) => {
         innerHtml += `
-        <div class="content" style="padding: 10px; margin-bottom: 10px; margin-left: 90px; margin-top: 20px; width: 80%; display: flex; justify-content: space-evenly; align-items: center; border: 2px solid black">
+        <div class="content" style="padding: 10px; margin-bottom: 10px; margin-left: 90px; margin-top: 20px; width: 80%; display: flex; justify-content: space-evenly; align-items: center; ">
                 <span style="width: 5%; font-size: 20px; ">${ele.firstName}</span>
                 <span style="width: 5%; font-size: 20px; margin-left: 70px;">${ele.lastName}</span>
                 <span style="width: 5%; font-size: 20px; margin-left: 70px;">${ele.country}</span>
                 <span style="width: 5%; font-size: 20px; margin-left: 40px;">${ele.score}</span>
             <div class = "btn-grp" style = "display: flex; justify-content: center; align-items: center; cursor: pointer;" >
-                <span class="material-symbols-outlined" style = "padding:5px">
+                <span class="material-symbols-outlined" style = "padding:5px" id = "dlt-btn">
                 delete
                 </span>
-                    <span class="add" style="font-size: 20px; padding:5px; margin-left: 10px; border: 2px solid black">+5</span>
-                    <span class="sub" style="font-size: 20px; padding:5px; margin-left: 10px; border: 2px solid black">- 5</span>
+                    <span id="add" style="font-size: 20px; padding:5px; margin-left: 10px; ">+ 5</span>
+                    <span id="sub" style="font-size: 20px; padding:5px; margin-left: 10px; ">- 5</span>
             </div>
             
         </div>`;
@@ -129,20 +129,16 @@ function updateData() {
 const activateEventListener = () => {
     document.querySelectorAll('.btn-grp').forEach((el, index) => {
         el.addEventListener('click', (e) => {
-            if (e.srcElement.classList.value === 'add') {
+            if (e.target.id === 'add') {
                 myData[index].score += 5;
-            } else {
+            } else if (e.target.id === 'sub') {
                 myData[index].score -= 5;
+            } else if (e.target.id === 'dlt-btn') {
+                myData.splice(index, 1);
             }
             updateData();
         })
     })
-}
-
-const deletePlayer = () => {
-    let del = document.querySelector('.material-symbols-outlined');
-
-
 }
 
 window.onload = updateData();

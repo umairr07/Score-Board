@@ -7,6 +7,19 @@
 body {
   height: 100vh;
   width: 100%;
+  /* background-image: url(bg-img2.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain; */
+  background-color: gray;
+}
+
+section {
+  /* border: 2px solid black; */
+  margin-top: 50px;
+  margin-left: 125px;
+  margin-right: 20px;
+  width: 85%;
 }
 
 h1 {
@@ -21,7 +34,8 @@ form {
   justify-content: space-evenly;
   width: 70%;
   margin-top: 50px;
-  margin-left: 170px;
+  margin-left: 160px;
+  gap: 10px;
 }
 
 form > input {
