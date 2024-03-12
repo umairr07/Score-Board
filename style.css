@@ -22,6 +22,7 @@ section {
   margin-right: 20px;
   width: 85%;
   font-weight: bold;
+  height: 80%;
 }
 
 .glass {
@@ -30,16 +31,16 @@ section {
     rgba(255, 255, 255, 0.3),
     rgba(255, 255, 255, 0)
   );
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
   border-radius: 20px;
-  border: 2px solid rgba(255, 255, 255, 0.18);
+  border: 2px solid rgba(255, 255, 255 0.18);
   box-sizing: rgba(0, 0, 0, 0.17);
+  background-blend-mode: lighten;
 }
 
 h1 {
   text-align: center;
-  margin-top: 50px;
   font-size: 30px;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
@@ -56,10 +57,85 @@ form {
 form > input {
   padding: 5px;
   width: 200px;
+  border-radius: 10px;
+  border: none;
+}
+
+input::placeholder {
+  color: black;
+  font-weight: 500;
+  font-size: 15px;
+  padding: 5px;
 }
 
 button {
   padding: 8px;
   width: 200px;
   cursor: pointer;
+  border-radius: 10px;
+  border: none;
+}
+
+hr {
+  margin-top: 20px;
+  size: 10px;
+}
+
+.content {
+  color: black;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.3),
+    rgba(255, 255, 255, 0)
+  );
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border-radius: 20px;
+  box-sizing: rgba(0, 0, 0, 0.17);
+  background-blend-mode: lighten;
+}
+
+#dlt-btn {
+  color: rgb(208, 58, 58);
+  background-color: white;
+  border-radius: 50px;
+}
+
+#add {
+  color: green;
+  background-color: white;
+  border-radius: 50px;
+}
+
+#sub {
+  color: rgb(208, 58, 58);
+  background-color: white;
+  border-radius: 50px;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    height: 92.2vh;
+  }
+
+  section {
+    margin-left: 60px;
+  }
+
+  form {
+    margin-left: 120px;
+  }
+  form > input {
+    padding: 5px;
+    width: 80px;
+    border-radius: 10px;
+    border: none;
+  }
+
+  input::placeholder {
+    color: black;
+    font-weight: 500;
+    font-size: 11px;
+    margin-left: 2px;
+  }
 }
