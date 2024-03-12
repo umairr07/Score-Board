@@ -5,13 +5,14 @@
 }
 
 body {
-  height: 100vh;
+  height: 90vh;
   width: 100%;
-  /* background-image: url(bg-img2.jpg);
+  background-image: url(bg-img4.avif);
   background-repeat: no-repeat;
   background-position: center;
-  background-size: contain; */
+  background-size: cover;
   background-color: gray;
+  color: white;
 }
 
 section {
@@ -20,6 +21,20 @@ section {
   margin-left: 125px;
   margin-right: 20px;
   width: 85%;
+  font-weight: bold;
+}
+
+.glass {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.3),
+    rgba(255, 255, 255, 0)
+  );
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 20px;
+  border: 2px solid rgba(255, 255, 255, 0.18);
+  box-sizing: rgba(0, 0, 0, 0.17);
 }
 
 h1 {
