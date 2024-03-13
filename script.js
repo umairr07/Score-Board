@@ -112,11 +112,11 @@ function updateData() {
                 <span style="width: 5%; font-size: 20px; margin-left: 70px;">${ele.country}</span>
                 <span style="width: 5%; font-size: 20px; margin-left: 40px;">${ele.score}</span>
             <div class = "btn-grp" style = "display: flex; justify-content: center; align-items: center; cursor: pointer;" >
-                <span class="material-symbols-outlined" style = "padding:5px" id = "dlt-btn">
-                delete
-                </span>
                     <span id="add" style="font-size: 20px; padding:5px; margin-left: 10px; ">+ 5</span>
                     <span id="sub" style="font-size: 20px; padding:5px; margin-left: 10px; ">- 5</span>
+                    <span class="material-symbols-outlined" style = "padding:5px" id = "dlt-btn">
+                delete
+                </span>
             </div>
             
         </div>`;

@@ -96,18 +96,22 @@ hr {
 }
 
 #dlt-btn {
+  margin-left: 10px;
+}
+
+#dlt-btn:hover {
   color: rgb(208, 58, 58);
   background-color: white;
   border-radius: 50px;
 }
 
-#add {
+#add:hover {
   color: green;
   background-color: white;
   border-radius: 50px;
 }
 
-#sub {
+#sub:hover {
   color: rgb(208, 58, 58);
   background-color: white;
   border-radius: 50px;
